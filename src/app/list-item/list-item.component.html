@@ -1,5 +1,6 @@
-<p>list-item works!</p>
-<li *ngIf="text; else contentSlot">{{ text }}</li>
+<li class="list-item" *ngIf="text; else contentSlot">{{ text }}</li>
 <ng-template #contentSlot>
-  <ng-content></ng-content>
+  <li class="list-item">
+    <ng-content></ng-content>
+  </li>
 </ng-template>

@@ -1,6 +1,5 @@
-<div class="card">
-  <h3>{{ product.name }}</h3>
-  <p>Price: {{ discountedPrice }}</p>
-  <ng-content></ng-content>
-  <button (click)="showDetails()">Ознайомитися</button>
-</div>
+<h3>{{ product.name }}</h3>
+<img src="{{ product.src }}" alt="{{ product.alt }}" />
+<p>Price: {{ discountedPrice }} $</p>
+<ng-content></ng-content>
+<button (click)="showDetails()" class="discount-button">Ознайомитися</button>

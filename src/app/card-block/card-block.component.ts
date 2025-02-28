@@ -11,7 +11,7 @@ import { Product } from "../models/product";
 @Component({
   selector: "app-card-block",
   templateUrl: "./card-block.component.html",
-  styleUrls: ["./card-block.component.scss"],
+  styleUrls: ["./card-block.component.css"],
 })
 export class CardBlockComponent implements AfterViewInit {
   @Input() product!: Product;
@@ -21,7 +21,7 @@ export class CardBlockComponent implements AfterViewInit {
   constructor(private elRef: ElementRef) {}
 
   get discountedPrice(): number {
-    return this.discount ? this.product.price - 15 : this.product.price;
+    return this.discount ? this.product.price * 0.85 : this.product.price;
   }
 
   showDetails() {
